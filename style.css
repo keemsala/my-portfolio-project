@@ -1,0 +1,187 @@
+body {
+    background: black url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+    background-size: 400% 400%;
+    animation: bg-scroll 10s linear infinite;
+    color: #00ffcc;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    cursor: url('custom-cursor.cur'), auto;
+}
+
+
+h1.marquee {
+    font-size: 2rem;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0.5; }
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #ffff00;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+.top8-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.friend {
+    background: #333;
+    padding: 10px;
+    border: 2px solid #ff00ff;
+    transition: transform 0.3s;
+}
+
+.friend:hover {
+    transform: scale(1.1);
+    background: #ff00ff;
+    color: #000;
+}
+
+@keyframes bg-scroll {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+.friend::after {
+    content: '★ Bestie';
+    display: block;
+    font-size: 0.8rem;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.container {
+    border: 3px solid #ff00ff;
+    box-shadow: 0 0 20px #ff00ff;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.8);
+    max-width: 900px;
+    margin: auto;
+}
+
+nav a {
+    position: relative;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #ff00ff;
+    transition: width 0.3s ease-in-out;
+}
+nav a:hover::after {
+    width: 100%;
+}
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #111;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-pic {
+    width: 400px !important;
+    height: 400px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+    display: block;
+    margin: 10px auto;
+}
+
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
+}
+
+
+.profile-info h3 {
+    margin: 0;
+    color: #ffcc00;
+}
+
+.online-status {
+    color: #00ff00;
+    font-weight: bold;
+    margin: 5px 0;
+    animation: pulse 1s infinite;
+}
+
+.bio {
+    font-style: italic;
+    color: #ccc;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.resume-frame {
+    border: 3px solid #ff00ff;
+    box-shadow: 0 0 20px #ff00ff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.download-link {
+    color: #00ffcc;
+    font-weight: bold;
+    text-decoration: none;
+    background: #333;
+    padding: 10px 20px;
+    border: 2px solid #ff00ff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ff00ff;
+    transition: all 0.3s ease-in-out;
+}
+
+.download-link:hover {
+    background: #ff00ff;
+    color: #000;
+    box-shadow: 0 0 20px #ff00ff;
+}
+
