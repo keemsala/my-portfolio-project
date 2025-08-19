@@ -185,3 +185,17 @@ img {
     box-shadow: 0 0 20px #ff00ff;
 }
 
+.project-slides {
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.project-slides iframe {
+    width: 100%;
+    max-width: 960px;
+    height: 569px;
+    border: none;
+}
+
